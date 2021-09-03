@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desgin By Hải Phạm JS</title>
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel=" stylesheet " href=" https://unpkg.com/aos@next/dist/aos.css " />
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .col {
+            text-align: center;
+            background-clip: content-box;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid wide">
+        <div id="header">
+            <div class="row">
+                <label for="nav__tablet_input" id="header__top-nav-mob" class="col l-0 m-3 c-3">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                        class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512" width="28px" color="white">
+                        <path fill="currentColor"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </label>
+
+                <!-- Logo -->
+                <div id="header__top-logo" class="col l-2 c-6 m-6">
+                    <img src="./img/logo_2.png" alt="">
+                </div>
+
+                <!-- header: search dành cho mobile và MTB -->
+                <label id="header__top-search-mob" class="col c-3 l-0 m-3">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
+                        class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512" width="28px" color="white">
+                        <path fill="currentColor"
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                        </path>
+                    </svg>
+                </label>
+
+                <!-- Checkbox -->
+                <input type="checkbox" name="" class="nav__input" id="nav__tablet_input">
+
+                <!-- Bao phủ đen khi dùng moblie -->
+                <label class="container__overlay" for="nav__tablet_input"></label>
+
+                <!-- Menu trên mobile -->
+                <nav class="nav__mobile">
+
+                    <!-- Nút X -->
+                    <label for="nav__tablet_input" class="nav__mobile-close">
+
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                            class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 352 512" width="28px">
+                            <path fill="currentColor"
+                                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                            </path>
+                        </svg>
+                    </label>
+
+                    <ul class="nav__mobile_list">
+                        <li>
+                            <a href="" class="nav__mobile_link">Home</a>
+                        </li>
+                        <div id="nav__mobile">
+                            <li>
+                                <a class="nav__mobile_link" id="nav__mobile-product">
+                                    Product</a>
+                                <div class="test1" style="text-align: center; padding-right: 10px;" onclick="kiemtra()">
+
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up"
+                                        class="svg-inline--fa fa-chevron-up fa-w-14" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25px">
+                                        <path fill="currentColor"
+                                            d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <script>
+                                    var check = 1;
+                                    function kiemtra() {
+                                        check++;
+                                        if (check % 2 == 0) {
+                                            xoay0();
+                                            hienmenumobile();
+                                            menuProduct();
+                                        } else {
+                                            xoay180();
+                                            anmenumobile();
+                                            menuProduct2();
+                                        }
+                                    }
+                                    function menuProduct() {
+                                        var das = document.querySelector('#nav__mobile-product');
+                                        das.style.backgroundColor = 'gainsboro';
+                                        das.style.color = 'black';
+                                    }
+                                    function menuProduct2() {
+                                        var das = document.querySelector('#nav__mobile-product');
+                                        das.style.backgroundColor = 'white';
+                                        das.style.color = 'gray';
+                                    }
+                                    function xoay0() {
+                                        var das = document.querySelector('.test1');
+                                        das.style.transform = 'rotate(0deg)';
+                                        das.style.transition = 'transform 0.5s';
+                                    }
+                                    function xoay180() {
+                                        var das = document.querySelector('.test1');
+                                        das.style.transform = 'rotate(180deg)';
+                                        das.style.transition = 'transform 0.5s';
+                                    }
+                                    function hienmenumobile() {
+                                        var das = document.querySelector('.menu__mobile');
+                                        das.style.display = 'block';
+                                    }
+                                    function anmenumobile() {
+                                        var das = document.querySelector('.menu__mobile');
+                                        das.style.display = 'none';
+                                    }
+                                </script>
+
+
+                            </li>
+                        </div>
+                        <div class="menu__mobile">
+                            <li class="nav__mobile_link2 menu_mobile_part">Fruit</li>
+                            <li class="nav__mobile_link2 menu_mobile_part">Vegetable</li>
+                            <li class="nav__mobile_link2 menu_mobile_part">Fruit Juice</li>
+                            <li class="nav__mobile_link2 menu_mobile_part">Ice Cream</li>
+                            <li class="nav__mobile_link2 menu_mobile_part">Food</li>
+                            <li class="nav__mobile_link2 menu_mobile_part">Meat</li>
+                            <li class="nav__mobile_link2 menu_mobile_part">Other</li>
+                        </div>
+                        <li>
+                            <a href="" class="nav__mobile_link">Shopping guide</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile_link">Knowledge</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile_link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- Menu dropdown dành cho PC -->
+                <div id="header__top-menu-pc" class="col l-7 m-0 c-0">
+                    <div>
+                        <nava>
+                            <ul class="row">
+                                <li class="col l-3"><a href="#" class="white-text">Home</a></li>
+                                <li class="col l-3"><a href="#" class="white-text">Press</a>
+                                    <ul>
+                                        <li><a href="#">Themes</a></li>
+                                        <li><a href="#">Plugins</a></li>
+                                        <li><a href="#">Tutorials</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col l-3"><a href="#" class="white-text">Web</a>
+                                    <ul>
+                                        <li><a href="#">Tutorials</a>
+
+                                        </li>
+                                        <li><a href="#">Resources</a>
+                                            <ul>
+                                                <li><a href="#">HTML/CSS</a></li>
+                                                <li><a href="#">jQuery</a></li>
+                                                <li><a href="#">Other</a>
+                                                    <ul>
+                                                        <li><a href="#">Stuff</a></li>
+                                                        <li><a href="#">Things</a></li>
+                                                        <li><a href="#">Other Stuff</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Links</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col l-3"><a href="#" class="white-text" .0>About</a></li>
+                            </ul>
+                        </nava>
+                    </div>
+                </div>
+                <!-- +++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <div id="header__top-search-pc" class="col l-3 m-0 c-0">
+                    <div id="cover">
+                        <form method="get" action="">
+                            <div class="tb">
+                                <div class="td"><input type="text" placeholder="Search" required></div>
+                                <div class="td" id="s-cover">
+                                    <button type="submit">
+                                        <div id="s-circle"></div>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phần nội dung đầu trang -->
+            <div class="row" id="header__content">
+                <div id="header__content-text-top" data-aos="fade-up" data-aos-delay="500">
+                    <span>FAST USER DELIVERY</span>
+                </div>
+                <div id="header__content-text-mid" data-aos="fade-up" data-aos-delay="700">
+                    <span>ORGANIC PRODUCT</span>
+                </div>
+                <div id="header__content-text-bottom" data-aos="fade-up" data-aos-delay="900">
+                    <span>We provide high quality organic products</span>
+                </div>
+            </div>
+
+            <!-- Phần buttton -->
+            <div id="header__content-button" class="row" data-aos="fade-up" data-aos-delay="500">
+                <div style="margin: auto auto; color: white">
+                    <a class="button1" href=""><span class="btn1">Buy now</span></a>
+                </div>
+            </div>
+        </div>
+        <div id="main__category">
+            <div class="row">
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="main__category-part">
+                        <div class="main__category-part-img">
+                            <img src="img/trai-cay3.png" alt="">
+                        </div>
+                        <span>Fruit</span>
+                    </div>
+                </div>
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="main__category-part">
+                        <div class="main__category-part-img">
+                            <img src="img/veget.png" alt="">
+                        </div>
+                        <span>Vegetable</span>
+                    </div>
+                </div>
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="main__category-part">
+                        <div class="main__category-part-img">
+                            <img src="img/nuoc-ep.png" alt="">
+                        </div>
+                        <span>Fruit Juice</span>
+                    </div>
+                </div>
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="main__category-part">
+                        <div class="main__category-part-img">
+                            <img src="img/kem.png" alt="">
+                        </div>
+                        <span>Ice cream</span>
+                    </div>
+                </div>
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="main__category-part">
+                        <div class="main__category-part-img">
+                            <img src="img/luong-thuc.jpg" alt="">
+                        </div>
+                        <span>Food</span>
+                    </div>
+                </div>
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="main__category-part">
+                        <div class="main__category-part-img">
+                            <img src="img/thit.jpeg" alt="">
+                        </div>
+                        <span>Meat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main__product-mode" data-aos="fade-up">
+            <div class="row">
+                <div class="main__product-mode-title">
+                    <span>BEST SELLING PRODUCT</span>
+                </div>
+            </div>
+            <div class="row slick autoplay">
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/duahau.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Watermelon</h3>
+                        <h3>5$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/nhomy.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>American grapes</h3>
+                        <h3>15$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/thitbocobe.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Kobe Beef</h3>
+                        <h3>1000$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/cachua.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Tomato</h3>
+                        <h3>2$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/bapcai.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Cabbage</h3>
+                        <h3>1.5$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/qualuu.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Pomegranate</h3>
+                        <h3>5.2$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/cahoi.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Salmon</h3>
+                        <h3>1500$</h3>
+                    </div>
+                </div>
+                <div class="main__product-mode-part">
+                    <div class="main__product-mode-part-img">
+                        <img src="./img/dautay.png" alt="">
+                    </div>
+                    <div class="main__product-mode-part-span">
+                        <h3>Strawberry</h3>
+                        <h3>5$</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="main__sale" data-aos="fade-up">
+        <div class="grid wide">
+            <div class="row">
+                <div class="main__sale-text-top" data-aos="fade-up" data-aos-delay="100">
+                    <span>CHANCE TO FIND THE BEST PRICE OF THE WEEK</span>
+                </div>
+                <div class="main__sale-text-mid" data-aos="fade-up" data-aos-delay="200">
+                    <span>BIG SALES</span>
+                </div>
+                <div class="main__sale-text-bottom" data-aos="fade-up" data-aos-delay="300">
+                    <span>FROM OUR FARM NEAR YOUR HOME</span>
+                </div>
+            </div>
+            <div id="main__sale-content">
+                <div id="main__sale-content-clock">
+                    <div id="clockdiv" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <span class="days"></span>
+                            <div class="smalltext">Days</div>
+                        </div>
+                        <div>
+                            <span class="hours"></span>
+                            <div class="smalltext">Hours</div>
+                        </div>
+                        <div>
+                            <span class="minutes"></span>
+                            <div class="smalltext">Minutes</div>
+                        </div>
+                        <div>
+                            <span class="seconds"></span>
+                            <div class="smalltext">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row slick autoplay" data-aos="fade-up" data-aos-delay="100">
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/xoaicat.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Hoa Loc mango...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>5$</strike> &#8594; <b>4$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/bosap.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Lam Dong 034 Butter...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>5.4$</strike> &#8594; <b>3$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/vai-thieu.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Bac Giang Lychee...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>2.2$</strike> &#8594; <b>1.5$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="" width="150px">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/kiwi.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Kiwi...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>10$</strike> &#8594; <b>7.7$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="" width="150px">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/thitbachi.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Bacon...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>6$</strike> &#8594; <b>5.2$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="" width="150px">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/saurieng.png" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Fresh Durian 1kg...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>8$</strike> &#8594; <b>7.1$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="" width="150px">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/tomsu.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Fresh tiger prawns...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>25$</strike> &#8594; <b>23$</b></span>
+                        </div>
+                    </div>
+                    <div class="main__sale-content-part col">
+                        <div class="main__sale-content-sale-img">
+                            <img src="./img/sale.png" alt="" width="150px">
+                        </div>
+                        <div class="main__sale-content-part-img">
+                            <img src="./img/buoidaxanh.jpg" alt="">
+                        </div>
+                        <div class="main__sale-content-part-span">
+                            <span>Ben Tre green-skinned pomelo...</span>
+                        </div>
+                        <div class="main__sale-content-part-span2">
+                            <span><strike>5$</strike> &#8594; <b>3$</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 10vh; width: 100%;">
+
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/slick.js"></script>
+<script src="./js/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1800,
+        once: true
+    });
+</script>
+<script>
+    let observer = new IntersectionObserver((entries, observer) => { entries.forEach((entry) => { if (entry.isIntersecting) { AOS.refresh(); } }); }); document.querySelectorAll('[data-aos]').forEach((aosElem) => { observer.observe(aosElem); });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.autoplay').slick({
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 990,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+            ]
+        });
+    });
+</script>
+<script>
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+            }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var today = new Date();
+
+    var endSale = [{
+        'Month': 9,
+        'Day': 5,
+        'Hour': 0,
+        'Minute': 0,
+        'Second': 0
+    }]
+
+    if (endSale[0]['Month'] == today.getMonth() + 1) {
+        var timeFinish = 24 * 3600 - (today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds()) + 24 * 3600 * (- today.getDate() + endSale[0]['Day']);
+    } else {
+        var timeFinish = 24 * 3600 - (today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds()) + 24 * 3600 * (30 - today.getDate() + 1 + endSale[0]['Day']);
+    }
+
+    var timeRest = timeFinish / (3600 * 24)
+
+    var deadline = new Date(Date.parse(new Date()) + timeRest * 24 * 60 * 60 * 1000);
+    initializeClock('clockdiv', deadline);
+</script>
+
+</html>
