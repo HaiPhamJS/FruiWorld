@@ -439,6 +439,7 @@ ____________________________________________________________________
 
 #main__sentences .row {
     background-color: white;
+    overflow: hidden;
 }
 
 .main__sentences-part {
