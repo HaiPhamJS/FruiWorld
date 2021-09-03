@@ -459,6 +459,7 @@ ____________________________________________________________________
 .main__sentences-part-span {
     text-align: center;
     font-size: 20px;
+    overflow: hidden;
 }
 
 .main__sentences-part-span p {
