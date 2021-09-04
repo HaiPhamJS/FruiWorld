@@ -22,6 +22,80 @@ body {
     overflow: hidden;
 }
 
+#call {
+    position: fixed;
+    left: 20px;
+    bottom: 25px;
+    z-index: 2;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+
+#call-me svg {
+    width: 30px;
+    margin: 0 auto;
+    color: white;
+}
+
+#call-infor {
+    position: absolute;
+    margin-top: -20vh;
+    height: max-content;
+    display: none;
+}
+
+.call-infor-part:first-child {
+    color: #4267b2;
+    border-radius: 25px;
+    border: none;
+}
+
+#button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 #banner_welcome {
     position: fixed;
     top: 0;
@@ -62,7 +136,7 @@ body {
 }
 
 #header {
-    margin-top: 2%;
+    margin-top: 20px;
 }
 
 .grid {
@@ -459,7 +533,6 @@ ____________________________________________________________________
 .main__sentences-part-span {
     text-align: center;
     font-size: 20px;
-    overflow: hidden;
 }
 
 .main__sentences-part-span p {
@@ -910,6 +983,9 @@ ____________________________________________________________________
     .btn5 {
         transform: scale(0.8);
     }
+    #call-infor {
+        margin-top: -25vh;
+    }
     body {
         background-size: 180%;
         background-position-y: 0vh;
@@ -1043,6 +1119,9 @@ ____________________________________________________________________
     #clockdiv {
         width: max-content;
         margin-top: -5%;
+    }
+    #call-infor {
+        margin-top: -30vh;
     }
 }
 
