@@ -38,6 +38,10 @@ body {
     cursor: pointer;
 }
 
+#call-me {
+    display: flex;
+}
+
 #call-me svg {
     width: 30px;
     margin: 0 auto;
