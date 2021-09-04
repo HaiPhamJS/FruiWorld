@@ -673,6 +673,52 @@ ____________________________________________________________________
 .main__sale-content-part-span2 strike {
     color: red;
 }
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#main__banner {
+    margin-top: 3%;
+    height: max-content;
+    overflow: hidden;
+}
+
+#main__banner .row {
+    background-color: white;
+}
+
+.banner {
+    height: 310px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner2 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.banner img:hover {
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+.main__banner-title {
+    margin-top: 5vh;
+    height: max-content;
+    font-size: 50px;
+    text-align: center;
+}
+
+.main__banner-title span {
+    width: 100%;
+    font-weight: bold;
+}
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1047,6 +1093,9 @@ ____________________________________________________________________
     }
     .main__sentences-part-span p {
         margin-top: 5%;
+    }
+    .banner {
+        height: max-content;
     }
     .grid.wide {
         width: 90%;

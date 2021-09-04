@@ -46,9 +46,8 @@
                 <div class="hotline-phone-ring-circle mess-0"></div>
                 <div class="hotline-phone-ring-circle-fill mess"></div>
                 <div class="hotline-phone-ring-img-circle mess-2">
-                    <a href="tel:0988333069" class="pps-btn-img">
-                        <img src="https://i.rada.vn/data/image/2020/10/15/Facebook-Messenger-200.png"
-                            alt="Gọi điện thoại" width="70">
+                    <a href="https://m.me/profile.php?id=100049717957983" class="pps-btn-img">
+                        <img src="https://i.rada.vn/data/image/2020/10/15/Facebook-Messenger-200.png" width="70">
                     </a>
                 </div>
             </div>
@@ -361,7 +360,7 @@
                         <span>Ice cream</span>
                     </div>
                 </div>
-                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="main__category-part">
                         <div class="main__category-part-img">
                             <img src="img/luong-thuc.jpg" alt="">
@@ -369,7 +368,7 @@
                         <span>Food</span>
                     </div>
                 </div>
-                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col l-2 m-4 c-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="main__category-part">
                         <div class="main__category-part-img">
                             <img src="img/thit.jpeg" alt="">
@@ -642,8 +641,36 @@
         </div>
         <div style="height: 10vh; width: 100%;"></div>
     </div>
-    <div style="height: 10vh; width: 100%;">
-
+    <div id="main__banner" data-aos="fade-up">
+        <div class="grid wide">
+            <div class="row main__banner-title" data-aos="fade-up" data-aos-delay="100">
+                <span>
+                    New Product
+                </span>
+            </div>
+            <div class="row">
+                <div class="col l-6 banner" data-aos="fade-right" data-aos-delay="150">
+                    <div class="banner2">
+                        <img src="./img/banner3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col l-6 banner" data-aos="fade-left" data-aos-delay="200">
+                    <div class="banner2">
+                        <img src="./img/banner4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col l-6 banner" data-aos="fade-right" data-aos-delay="250">
+                    <div class="banner2">
+                        <img src="./img/banner5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col l-6 banner" data-aos="fade-left" data-aos-delay="300">
+                    <div class="banner2">
+                        <img src="./img/banner6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./js/jquery-3.6.0.min.js"></script>
@@ -739,11 +766,13 @@
 
     var endSale = [{
         'Month': 9,
-        'Day': 5,
+        'Day': 4,
         'Hour': 0,
         'Minute': 0,
         'Second': 0
     }]
+
+    console.log(today)
 
     if (endSale[0]['Month'] == today.getMonth() + 1) {
         var timeFinish = 24 * 3600 - (today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds()) + 24 * 3600 * (- today.getDate() + endSale[0]['Day']);

@@ -2,14 +2,14 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 999999;
+    z-index: 2;
 }
 
 .hotline-phone-ring-wrap:last-child {
     position: fixed;
     bottom: 50px;
     left: 0;
-    z-index: 999999;
+    z-index: 2;
 }
 
 .hotline-phone-ring {
